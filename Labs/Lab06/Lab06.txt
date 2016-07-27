@@ -1,0 +1,40 @@
+
+CS102
+Labs No.6  - Recursion
+
+ 
+
+
+(a) Write a recursive Java method that counts the number of occurrences of the character “a” in a string.
+
+(b) Suppose you have an array of integers. Write a recursive Java method that returns true if the array is sorted from smallest to largest, and false otherwise.
+
+(c) Write a recursive method to compute the greatest common divisor (gcd) using Euclid’s algorithm. Hint: for positive integers p and q: If p > q, the gcd of p and q is the same as the gcd of q and (p % q).
+
+(d) Write a recursive method to find the size of a directory (folder) on your computer's disk. The size of a directory is the sum of the sizes of all files in the directory. Note that a directory may also contain subdirectories. Hint: Check the File class from the below link. In particular look at the length, listFiles and isDirectory methods, plus the "File(String directory)" constructor. http://docs.oracle.com/javase/8/docs/api/java/io/File.html
+
+(e) Write a recursive method that takes a decimal value as an int parameter and prints out the binary equivalent of it on the console. For example, if your method is passed the integer value 5 (decimal) it should print 101.
+
+(f) Suppose you have an ArrayList of String’s. Write a recursive method that returns true if the strings in the array is sorted (in lexicographic order), and false otherwise.
+
+(g) Write a recursive method that enumerates and prints all n-digit even numbers that have increasing values of digits (i.e., each digit is greater than the previous one).  Make sure your program prints each number just once. For example, for n=3 it will print:
+
+124  126  128  134  136  138  146  148  156 .....
+
+ 
+ 
+
+ 
+
+Optional Extras  (for practice only!)
+
+(a) Design, implement and test a recursive method that computes x to the power y for all (positive and negative) values of integer y.  Hint: First solve the problem for positive y, then think about the case of negative values.
+
+(b) Design, implement and test a recursive method that takes a decimal value as an int parameter and prints out the binary equivalent of it on the console. For example, if your method is passed the integer value 5 (decimal) it should print 101.
+
+(c) Redo (b) so that it returns the result as a String, rather than directly printing it on the console.
+
+(d) Write a recursive method to do the inverse of (c), that is, given a binary number (as a String), return the corresponding decimal int value.
+
+(e) Write a recursive method that takes an int array (x), and start and end indices (s & e), and returns true iff the values between s and e (inclusive) are all arranged in strictly ascending order.
+
