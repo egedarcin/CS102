@@ -1,0 +1,32 @@
+//Mehmet Saban Kulkuloglu, Lab07 additional task d
+import java.util.*;
+public class Lab07additional {
+	public static void main(String[] args){
+		Scanner scan=new Scanner(System.in);//everythimg is same except I import stack class and useit like arraylist here
+		Stack<Integer> stack1=new Stack<Integer>();
+		String str;
+		int result=0;
+		
+		System.out.println("Enter a string to calculate");
+		str=scan.next();
+		String operators="";
+		for(int i=0; i<str.length();i++){
+			if(str.charAt(i)=='+' || str.charAt(i)=='-')
+				operators=operators+str.charAt(i);
+				
+			if(str.charAt(i)!='+' && str.charAt(i)!='-')
+				stack1.push(Character.getNumericValue((str.charAt(i))));				
+		}
+		for(int j=operators.length()-1;j>=0;j--){
+			if(operators.charAt(j)=='-')
+			result=result-stack1.pop();
+			else if (operators.charAt(j)=='+')
+			result=result+stack1.pop();		
+		}
+		result=result+stack1.pop();
+		System.out.println(result);
+		
+		
+		
+	}
+}

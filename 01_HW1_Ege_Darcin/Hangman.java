@@ -1,0 +1,106 @@
+/*
+ * Author: Ege Darcin
+ * CS102-1 HW
+ * Program: Hangman Game
+ * Here is the Hangman game!
+ * Long story short, I have taken some parts of the programs that my classmates created and 
+ * wrote the rest my own. The hardest part for me was dealing with the puzzle pieces of codes that aren't even from the same puzzle. 
+ * Hope you enjoy the game!
+ */
+import java.io.*; 
+import java.util.*; 
+public class Hangman {
+  //final variables
+  private final int maxAllowedIncorrectTries = 6;
+  //list of words that user can try to guess
+  private final String[] wordList = {"java" , "server" , "project" , "encyclopedia" , "hangman" , "homework" , "programming" , 
+    "computer" , "coding", "lecture" , "music" , "object" , "sophisticated" , "interface" , "university" , "professor" , "student"};
+  
+  //variables
+  private StringBuffer secretWord, allLetters, usedLetters, knownSoFar;
+  private int numberOfIncorrectTries;
+  
+  //hangman class
+  public Hangman(){
+    allLetters = new StringBuffer("abcdefghijklmnopqrstuwxyz");
+    numberOfIncorrectTries = 0;
+    usedLetters = new StringBuffer("");
+    chooseSecretWord();
+    
+    //creates the cencored secret word
+    knownSoFar = new StringBuffer("");
+    for(int i = 0; i < secretWord.length(); i++)
+      knownSoFar.append("*");
+  }
+  
+  //takes the user input, checks the validity of it
+  public int tryThis(char letter){
+    if (letter < 'a' || letter > 'z')
+      return -1;
+    //checks if the letter is used already
+    else if (usedLetters.indexOf(Character.toString(letter)) > -1)
+      return -2;
+    //if not used, adds this letter to used, and checks the availability of the letter in the secret word
+    else if (usedLetters.indexOf(Character.toString(letter)) == -1){
+      usedLetters.append(letter);
+      boolean exists = false;
+      for(int i = 0; i < secretWord.length(); i++){
+        if(secretWord.charAt(i) == letter){
+          exists = true;
+          knownSoFar.deleteCharAt(i);
+          knownSoFar.insert(i, letter);
+        }
+      }
+      //if not , then adds 1 to the number of incorrect tries.
+      if(!exists)
+        numberOfIncorrectTries++;
+      //checks if the game is over after the turn
+      if(hasLost()){
+        System.out.println("You lost! The secret word was: " + secretWord);
+        return -3;
+      }
+      else if(isGameOver()){
+        System.out.print("You won!");
+        return -3;
+      }
+    }
+    return 0;
+  }
+  
+  //gets a random word from the wordList array
+  private void chooseSecretWord(){
+    Random rand = new Random();
+    secretWord = new StringBuffer(wordList[rand.nextInt(wordList.length)]);
+  }
+  //get-set methods
+  public int getMaxAllowedIncorrectTries()
+  {
+    return maxAllowedIncorrectTries;
+  }
+  
+  public String getAllLetters(){
+    return allLetters.toString();
+  }
+  
+  public String getUsedLetters(){
+    return usedLetters.toString();
+  }
+  
+  public int getNumOfIncorrectTries(){
+    return numberOfIncorrectTries;
+  }
+  
+  public String getKnownSoFar(){
+    return knownSoFar.toString();
+  }
+  
+  //game is over when there are no stars left in knownSoFar or maximum number of incorrect tries have been reached
+  public boolean isGameOver(){
+    return (knownSoFar.indexOf("*") == -1 || maxAllowedIncorrectTries - numberOfIncorrectTries == 0) ? true : false;
+  }
+  
+  //the player has lost if the maximum number of incorrect tries have been reached to zero and there are still some *'s in knownSoFar
+  public boolean hasLost(){
+    return (knownSoFar.indexOf("*") != -1 && maxAllowedIncorrectTries - numberOfIncorrectTries == 0) ? true : false;
+  }
+}

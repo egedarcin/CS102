@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20140826-r5761">
+  <project autorefresh="false" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="Menu.java" package="" timestamp="16-Jun-2016 19:19:33">
+        <select from="425" to="425"/>
+        <scroll column="162" row="0"/>
+      </file>
+      <file name="MySimpleURLReader.java" package="" timestamp="16-Jun-2016 13:21:58">
+        <select from="425" to="425"/>
+        <scroll column="162" row="0"/>
+      </file>
+      <file name="SuperHTMLFilteredReader.java" package="" timestamp="16-Jun-2016 18:07:03">
+        <select from="425" to="425"/>
+        <scroll column="162" row="0"/>
+      </file>
+      <file name="UrlTester.java" package="" timestamp="18-Jun-2016 23:35:41">
+        <select from="425" to="425"/>
+        <scroll column="162" row="0"/>
+      </file>
+      <file name="HTMLFilteredReader.java" package="" timestamp="16-Jun-2016 18:16:49">
+        <select from="425" to="425"/>
+        <scroll column="162" row="0"/>
+      </file>
+      <file name="wordSearch.java" package="" timestamp="16-Jun-2016 19:16:45">
+        <select from="425" to="425"/>
+        <scroll column="162" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath>
+      <file absolute="false" name="../cs1.jar"/>
+      <file absolute="false" name="cs1.jar"/>
+      <file absolute="false" name="cs1.jar"/>
+    </classpath>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

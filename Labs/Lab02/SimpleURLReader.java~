@@ -1,0 +1,4 @@
+public Class SimpleURLReader{
+  public static void main(String []args) {
+  }
+}

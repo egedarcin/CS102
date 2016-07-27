@@ -1,0 +1,27 @@
+/**
+ * @(#)Lab07.java
+ *
+ * Lab07 application
+ *
+ * @author 
+ * @version 1.00 2016/4/21
+ */
+//import java.util.*;
+public class Lab07 {
+    
+    public static void main(String[] args) {
+    //Scanner scan = new Scanner(System.in);
+    	
+	SimpleLinkedList list1= new SimpleLinkedList();
+	list1.addToHead("a");
+	list1.addToHead("b");
+	list1.addToHead("c");
+	list1.addToHead("d");
+	list1.addToHead("e");
+	
+	System.out.println(list1);
+	list1.addAnywhere("abc",3);
+    System.out.println(list1);
+
+    }  
+}

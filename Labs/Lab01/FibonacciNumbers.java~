@@ -1,0 +1,21 @@
+/* Author: Ege Darcin
+ * 21302460
+ * Lab 01
+ * Version: 1.1
+ * This class is for printing the first 40 Fibonacci numbers
+ */
+
+public class FibonacciNumbers {
+  public static void main (String [] args) {
+    IntBag fibonacciNumbers = new IntBag();
+    System.out.println("First 40 Fibonacci numbers are:");
+    fibonacciNumbers.add(0);
+    fibonacciNumbers.add(1);
+    for (int i = 2; i<40; i++)
+    {
+      fibonacciNumbers.add(fibonacciNumbers.get(i-2) + fibonacciNumbers.get(i-1));
+    } 
+    // print out the content - first 40 Fibonacci Numbers
+    System.out.println(fibonacciNumbers);
+  }
+}

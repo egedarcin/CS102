@@ -1,0 +1,33 @@
+import cs1.SimpleURLReader;
+/*
+ * MySimpleURLReader
+ * @author Ege Darcin
+ * @version 1.1
+ */
+
+public class MySimpleURLReader extends SimpleURLReader{
+  
+  //properties;
+  private String url = "";
+  
+  //constructor
+  MySimpleURLReader(String url){
+    super( url );
+    this.url = url;
+  }
+  
+  //methods
+  public String getURL(){
+    return url;
+  }
+  public String getName(){
+    int index = url.lastIndexOf('/');
+    int length = url.length();
+    
+    return url.substring(index + 1, length);
+  }
+  //deleting the nul bug
+  public String getPageContents(){
+    return super.getPageContents().substring(4);
+  }
+}

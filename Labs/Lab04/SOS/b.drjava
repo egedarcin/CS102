@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20140826-r5761">
+  <project autorefresh="false" build="Classes/" main="SOSFrame" manifest="" root="" work="">
+    <createjar file="SOSgame" flags="12"/>
+    <source>
+      <file active="true" name="SOSFrame.java" package="" timestamp="07-Jul-2016 21:15:13">
+        <select from="245" to="245"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="SOSPanel.java" package="" timestamp="07-Jul-2016 21:13:00">
+        <select from="245" to="245"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="SOSGrid.java" package="" timestamp="07-Jul-2016 21:28:11">
+        <select from="245" to="245"/>
+        <scroll column="0" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

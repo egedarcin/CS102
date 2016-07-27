@@ -1,0 +1,15 @@
+/*@author Mehmet Eren Turanboy section02-102
+ * 21302586
+ * 10.02.2016
+ */   
+
+//interface
+public interface Selectable {
+ 
+
+ boolean getSelected();
+ void setSelected(boolean selected);
+ boolean contains(int x, int y);
+    
+    
+}

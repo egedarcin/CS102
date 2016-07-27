@@ -1,0 +1,4 @@
+
+Ege Darcin 21302460 CS102-1
+
+Filling the empty methods that our classmates have created was fun but two different groups had different opinions about how a method should have worked so I wrote the project mainly by myself. I have learned in this homework how to use “append” method and string buffers which I didn’t know many things about. I used ASCII characters to determine that the input that user gives is according to the format. This game has two java docs, one being the hangman and the other, main. In Hangman, you can modify the word list, either add more or remove some. Moreover, if you want to raise the number of incorrect trials that the user can make, you can modify it from hangman class. Main class has the main method, simply run it and play the game. This program uses the compiler output to display the data.

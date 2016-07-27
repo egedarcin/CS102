@@ -1,0 +1,15 @@
+
+
+/*@author Mehmet Eren Turanboy section02-102
+ * 21302586
+ * 10.02.2016
+ */   
+
+public interface Locatable {
+    
+   //interface
+    int getX();
+    int getY();
+    void setLocation(int x, int y);
+    
+}
